@@ -1,6 +1,7 @@
 var app = angular.module("userProfiles");
 
-app.service("mainService", function() {
+app.service("mainService", function($http) {
+
   var data = [
     {
         "id": 1,
@@ -20,10 +21,9 @@ app.service("mainService", function() {
         "last_name": "bluth",
         "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
     }
-]
+];
   this.getUsers = function() {
     return data;
-    });
   };
 
 });
